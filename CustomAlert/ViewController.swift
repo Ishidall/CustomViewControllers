@@ -9,12 +9,37 @@
 import UIKit
 
 class ViewController: UIViewController {
+  
 
+  let alertController = CustomAlertViewController(message: "野生のTetsuさんAが現れた！野生のTetsuさんBが現れた！", messageLines: 0, actionButtonTitle: "たたかう", cancelButtonTitle: "にげる", actionButtonHandler: {
+    print("actionButtonTapped!")
+  }, cancelButtonHandler: {
+    print("cancelButtonTapped!")
+  })
+  var spinner = CustomSpinner(message: "アップロード中..")
+  
   override func viewDidLoad() {
     super.viewDidLoad()
     // Do any additional setup after loading the view, typically from a nib.
+    
+    self.view.backgroundColor = .green
   }
 
+  override func viewDidAppear(_ animated: Bool) {
+    super.viewDidAppear(animated)
 
+    self.present(alertController, animated: true)
+  }
+
+  @IBAction func showAlert(_ sender: Any) {
+//    self.present(alertController, animated: true)
+    spinner = CustomSpinner(message: "アップロード中..")
+    self.present(spinner, animated: true)
+    
+    DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
+//      self.spinner.changeMessage(message: "サイズ計測中..")
+      self.spinner.dismissSpinner()
+    }
+  }
 }
 

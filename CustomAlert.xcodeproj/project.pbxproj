@@ -12,6 +12,8 @@
 		E57F8AD12253139E00A6EA7D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E57F8ACF2253139E00A6EA7D /* Main.storyboard */; };
 		E57F8AD3225313A000A6EA7D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E57F8AD2225313A000A6EA7D /* Assets.xcassets */; };
 		E57F8AD6225313A000A6EA7D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E57F8AD4225313A000A6EA7D /* LaunchScreen.storyboard */; };
+		E57F8ADE2253148500A6EA7D /* CustomAlert.swift in Sources */ = {isa = PBXBuildFile; fileRef = E57F8ADD2253148500A6EA7D /* CustomAlert.swift */; };
+		E57F8AE22256FB6500A6EA7D /* CustomSpinner.swift in Sources */ = {isa = PBXBuildFile; fileRef = E57F8AE12256FB6500A6EA7D /* CustomSpinner.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +24,8 @@
 		E57F8AD2225313A000A6EA7D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E57F8AD5225313A000A6EA7D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E57F8AD7225313A000A6EA7D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E57F8ADD2253148500A6EA7D /* CustomAlert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomAlert.swift; sourceTree = "<group>"; };
+		E57F8AE12256FB6500A6EA7D /* CustomSpinner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomSpinner.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,11 +59,13 @@
 			isa = PBXGroup;
 			children = (
 				E57F8ACB2253139E00A6EA7D /* AppDelegate.swift */,
-				E57F8ACD2253139E00A6EA7D /* ViewController.swift */,
 				E57F8ACF2253139E00A6EA7D /* Main.storyboard */,
 				E57F8AD2225313A000A6EA7D /* Assets.xcassets */,
 				E57F8AD4225313A000A6EA7D /* LaunchScreen.storyboard */,
 				E57F8AD7225313A000A6EA7D /* Info.plist */,
+				E57F8ADD2253148500A6EA7D /* CustomAlert.swift */,
+				E57F8ACD2253139E00A6EA7D /* ViewController.swift */,
+				E57F8AE12256FB6500A6EA7D /* CustomSpinner.swift */,
 			);
 			path = CustomAlert;
 			sourceTree = "<group>";
@@ -135,6 +141,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E57F8AE22256FB6500A6EA7D /* CustomSpinner.swift in Sources */,
+				E57F8ADE2253148500A6EA7D /* CustomAlert.swift in Sources */,
 				E57F8ACE2253139E00A6EA7D /* ViewController.swift in Sources */,
 				E57F8ACC2253139E00A6EA7D /* AppDelegate.swift in Sources */,
 			);
