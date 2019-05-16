@@ -16,7 +16,7 @@ class ViewController: UIViewController {
   }, cancelButtonHandler: {
     print("cancelButtonTapped!")
   })
-  var spinner = CustomSpinner(message: "アップロード中..")
+  var spinner: CustomSpinner = CustomSpinner(message: "アップロード中..", additionalMessage: "40~60秒ほどお待ちください")
   
   override func viewDidLoad() {
     super.viewDidLoad()
@@ -28,17 +28,21 @@ class ViewController: UIViewController {
   override func viewDidAppear(_ animated: Bool) {
     super.viewDidAppear(animated)
 
-    self.present(alertController, animated: true)
+    self.show()
   }
 
   @IBAction func showAlert(_ sender: Any) {
-//    self.present(alertController, animated: true)
-    spinner = CustomSpinner(message: "アップロード中..")
+    self.show()
+  }
+  
+  func show() {
+    //    self.present(alertController, animated: true)
     self.present(spinner, animated: true)
     
     DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
 //      self.spinner.changeMessage(message: "サイズ計測中..")
       self.spinner.dismissSpinner()
+      self.present(self.alertController, animated: true)
     }
   }
 }
