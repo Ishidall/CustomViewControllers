@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E55A238A228D387D00FB443F /* CarouselModal.swift in Sources */ = {isa = PBXBuildFile; fileRef = E55A2389228D387D00FB443F /* CarouselModal.swift */; };
 		E57F8ACC2253139E00A6EA7D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E57F8ACB2253139E00A6EA7D /* AppDelegate.swift */; };
 		E57F8ACE2253139E00A6EA7D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E57F8ACD2253139E00A6EA7D /* ViewController.swift */; };
 		E57F8AD12253139E00A6EA7D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E57F8ACF2253139E00A6EA7D /* Main.storyboard */; };
@@ -17,6 +18,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		E55A2389228D387D00FB443F /* CarouselModal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarouselModal.swift; sourceTree = "<group>"; };
 		E57F8AC82253139E00A6EA7D /* CustomAlert.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CustomAlert.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E57F8ACB2253139E00A6EA7D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E57F8ACD2253139E00A6EA7D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -66,6 +68,7 @@
 				E57F8ADD2253148500A6EA7D /* CustomAlert.swift */,
 				E57F8ACD2253139E00A6EA7D /* ViewController.swift */,
 				E57F8AE12256FB6500A6EA7D /* CustomSpinner.swift */,
+				E55A2389228D387D00FB443F /* CarouselModal.swift */,
 			);
 			path = CustomAlert;
 			sourceTree = "<group>";
@@ -141,6 +144,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E55A238A228D387D00FB443F /* CarouselModal.swift in Sources */,
 				E57F8AE22256FB6500A6EA7D /* CustomSpinner.swift in Sources */,
 				E57F8ADE2253148500A6EA7D /* CustomAlert.swift in Sources */,
 				E57F8ACE2253139E00A6EA7D /* ViewController.swift in Sources */,

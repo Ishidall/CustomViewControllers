@@ -16,12 +16,39 @@ class ViewController: UIViewController {
   }, cancelButtonHandler: {
     print("cancelButtonTapped!")
   })
-  var spinner: CustomSpinner = CustomSpinner(message: "アップロード中..", additionalMessage: "40~60秒ほどお待ちください")
+  var spinner: CustomSpinner? = CustomSpinner(message: "アップロード中..", additionalMessage: "40~60秒ほどお待ちください")
+  var carouselModal: CarouselModal?
+  
+  var modalImage1: UIImage?
+  var modalImage2: UIImage?
   
   override func viewDidLoad() {
     super.viewDidLoad()
     // Do any additional setup after loading the view, typically from a nib.
     
+    let img1url = URL(string: "https://via.placeholder.com/300x600")
+    let img2url = URL(string: "https://via.placeholder.com/200x350")
+    
+    do {
+      let data1 = try Data(contentsOf: img1url!)
+      let data2 = try Data(contentsOf: img2url!)
+      
+      modalImage1 = UIImage(data: data1)
+      modalImage2 = UIImage(data: data2)
+    } catch {
+      print(error)
+    }
+    
+    
+    let modalImages = [modalImage1!, modalImage2!]
+    let modalDescriptions = ["これは\nサンプル画像です", "This is sample image\nvia placeholder.com"]
+
+    do {
+      self.carouselModal = try CarouselModal(title: "撮影のヒント", images: modalImages, descriptions: modalDescriptions)
+    } catch {
+      print(error)
+    }
+
     self.view.backgroundColor = .green
   }
 
@@ -36,13 +63,11 @@ class ViewController: UIViewController {
   }
   
   func show() {
-    //    self.present(alertController, animated: true)
-    self.present(spinner, animated: true)
+    carouselModal!.show(self)
     
     DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
 //      self.spinner.changeMessage(message: "サイズ計測中..")
-      self.spinner.dismissSpinner()
-      self.present(self.alertController, animated: true)
+      self.spinner?.dismissSpinner()
     }
   }
 }
